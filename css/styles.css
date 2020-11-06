@@ -1,0 +1,59 @@
+body {
+  background-image: url(https://i1.wp.com/www.trapperspizza.com/wp-content/uploads/2019/05/Pizza-Background.jpg?resize=1024%2C683)
+}
+
+img {
+  width: auto;
+  height:50%;
+  float: right;
+  margin: 10px;
+  border: 6px solid darkorange;
+  border-radius: 50%;
+  padding: 4px;
+  border-style: ridge;
+}
+
+h1 {
+  font-size: 30px;
+  float: right;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  border: 8px solid darkorange;
+  padding: 6px;
+  box-sizing: border-box;
+  border-style: groove;
+}
+
+
+#sizes {
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  display: block;
+  float: right;
+}
+
+#toppings {
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  display: block;
+  float: right;
+}
+
+
+
+/* h3 {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  }
+
+p {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+} */
