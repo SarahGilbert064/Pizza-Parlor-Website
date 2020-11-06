@@ -43,7 +43,7 @@ Pizza.prototype.priceOfPizza = function () {
 // User Interface Logic
 
 $(document).ready(function() {
-  $("form#pizza-toppings").click(function(event) {
+  $("form#button").click(function(event) {
     event.preventDefault();
 
     let size =$("#pizza-size").val();

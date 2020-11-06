@@ -17,8 +17,8 @@
       <br>
       <img src="image/cat-pizza.gif">
     <br>
-  <!-- </div> -->
-  <!-- <div class="container"> -->
+  </div>
+  <div class="container">
     <div class="pizza-order">
       <form id="sizes"> 
         <label for="pizza-size">Choose Your Size:</label>
@@ -37,14 +37,13 @@
         <input type="checkbox" name="toppings" value="1"> Olives<br>
         <input type="checkbox" name="toppings" value="1"> Bell Peppers<br>
         <input type="checkbox" name="toppings" value="1"> Pineapple<br>
-        <br>
-        <br>
-        <p></p>
-        <button type="button" class="btn-lg btn-default" id="order-price">Order Total</button>
+      </form>
+      <form id="button">
+        <button type="submit" class="btn-lg btn-default" id="order-price">Order Total</button>
       </form>
       <div id="price-output">
         <h3>As of right meow, your total is:</h3>
-        <p>$<span id="final-price"></span></p>  
+        <p><center>$</center><span id="final-price"></span></p>  
       </div>
     </div>
   </div>
