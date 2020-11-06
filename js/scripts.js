@@ -16,7 +16,6 @@ Pizza.prototype.priceOfPizza = function () {
     price +=4;
   } else {
     price += 6;
-    console.log(price);
   }
 
 // Describe: priceOfPizza
@@ -46,18 +45,16 @@ $(document).ready(function() {
   $("form#button").click(function(event) {
     event.preventDefault();
 
-    let size =$("#pizza-size").val();
-    let toppings = $("input:checkbox:checked").val();
+    $(".pizza-order").each(function() {
+      let size =$(this).find("#pizza-size").val();
+      let toppings = $(this).find("input:checkbox:checked").val();
+      
+      let newPizza = new Pizza(size, toppings);
+      console.log(newPizza);
+
+      $("#price-output").show();
+      $("#final-price").text(newPizza.priceOfPizza());
     
-    // let newPizza = new Pizza(size, topping);
-    
-    let userPizzaSize = $("select#pizza-size").val();
-    let newPizza = new Pizza(userPizzaSize);
-    
-    
-    $("#price-output").show();
-    $("#final-price").text(newPizza.price());
-    
-    
+    });
   });
 });
