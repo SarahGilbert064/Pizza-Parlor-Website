@@ -1,9 +1,11 @@
 //Business Logic
 
-function Pizza (size, toppings) {
+function Pizza (size, topping) {
   this.size = size;
   this.topping = topping;
 }
+
+// let newPizzaOrder = new Pizza ("large", "mushrooms");
 
 Pizza.prototype.priceOfPizza = function () {
   let price = 5;
@@ -33,29 +35,29 @@ Pizza.prototype.priceOfPizza = function () {
   return price;
   };
 
-//Test: Function should add to  
+//Test: Function should add to price result based off topping input.
+//Expect: priceOfPizza(5,2).toEqual("small"(9)); 
 
 
 
 // User Interface Logic
 
 $(document).ready(function() {
-  $("form#pizza-order").submit(function(event) {
+  $("form#pizza-toppings").click(function(event) {
     event.preventDefault();
 
+    let size =$("#pizza-size").val();
+    let toppings = $("input:checkbox:checked").val();
+    
+    // let newPizza = new Pizza(size, topping);
+    
     let userPizzaSize = $("select#pizza-size").val();
-    let newPizza = new Pizza(inputtedPizzaSize);
-
-    $.each($("input[name='toppings']:checked"), function() {
-      newPizza.this.topping.push($(this).val());
-    });
-
+    let newPizza = new Pizza(userPizzaSize);
+    
     
     $("#price-output").show();
-    $("#final-price").show(newPizza.price());
-
-  }
-
-
-  // const toppingStr = $("select#topping").val();
-  // const topping = parseInt(toppingStr);
+    $("#final-price").text(newPizza.price());
+    
+    
+  });
+});
