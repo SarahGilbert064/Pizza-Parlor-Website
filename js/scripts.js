@@ -22,15 +22,15 @@ Pizza.prototype.priceOfPizza = function () {
 // Test: Function should add up to a total depending on what size user chooses.
 // Expect: priceOfPizza(5).toEqual("small"(7));
 
-  if(this.topping === "1") {
-    price += 1;
-  } else if ( this.topping >= "1" && "1") {
-    price += 2;
-  } else if (this.topping >= "1") {
-    price += 3;
-  } else {
-    price += 4;
-  }
+  // if(this.topping === "1") {
+  //   price += 1;
+  // } else if ( this.topping ) {
+  //   price += 2;
+  // } else if (this.topping >= "1") {
+  //   price += 3;
+  // } else {
+  //   price += 4;
+  // }
   return price;
   };
 
