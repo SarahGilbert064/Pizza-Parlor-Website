@@ -5,17 +5,15 @@ function Pizza (size, topping) {
   this.topping = topping;
 }
 
-// let newPizzaOrder = new Pizza ("large", "mushrooms");
-
 Pizza.prototype.priceOfPizza = function () {
-  let price = 5;
+  let price = this.topping.length;
 
   if(this.size === "small") {
-    price += 2;
+    price += 10;
   } else if (this.size === "medium") {
-    price +=4;
+    price +=14;
   } else {
-    price += 6;
+    price += 16;
   }
 
 // Describe: priceOfPizza
@@ -47,7 +45,9 @@ $(document).ready(function() {
 
     $(".pizza-order").each(function() {
       let size =$(this).find("#pizza-size").val();
-      let toppings = $(this).find("input:checkbox:checked").val();
+      let toppings = $("input:checkbox:checked").map(function() {
+        return this.value;
+      }).get();
       
       let newPizza = new Pizza(size, toppings);
       console.log(newPizza);
